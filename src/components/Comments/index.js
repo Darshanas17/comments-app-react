@@ -12,9 +12,68 @@ const initialContainerBackgroundClassNames = [
   "red",
   "light-blue",
 ];
+const initialCommentList = [
+  {
+    id: uuidv4(),
+    name: "Aarav Sharma",
+    comment: "India's history is so rich, every place has a story to tell!",
+    time: new Date(Date.now() - 1000 * 60 * 5).toLocaleString(), // 5 minutes ago
+    isLiked: false,
+    profileClass:
+      initialContainerBackgroundClassNames[
+        Math.floor(Math.random() * initialContainerBackgroundClassNames.length)
+      ],
+  },
+  {
+    id: uuidv4(),
+    name: "Priya Iyer",
+    comment:
+      "The food diversity in India is unbeatable! Love trying new dishes.",
+    time: new Date(Date.now() - 1000 * 60 * 30).toISOString(), // 30 minutes ago
+    isLiked: false,
+    profileClass:
+      initialContainerBackgroundClassNames[
+        Math.floor(Math.random() * initialContainerBackgroundClassNames.length)
+      ],
+  },
+  {
+    id: uuidv4(),
+    name: "Vikram Khanna",
+    comment: "India is making great progress in technology and space research!",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 3).toLocaleString(), // 3 hours ago
+    isLiked: false,
+    profileClass:
+      initialContainerBackgroundClassNames[
+        Math.floor(Math.random() * initialContainerBackgroundClassNames.length)
+      ],
+  },
+  {
+    id: uuidv4(),
+    name: "Neha Kapoor",
+    comment: "I love how every state in India has its own unique traditions!",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 12).toISOString(), // 12 hours ago
+    isLiked: false,
+    profileClass:
+      initialContainerBackgroundClassNames[
+        Math.floor(Math.random() * initialContainerBackgroundClassNames.length)
+      ],
+  },
+  {
+    id: uuidv4(),
+    name: "Rahul Sen",
+    comment:
+      "The natural beauty of India, from beaches to mountains, is breathtaking!",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 24).toLocaleString(), // 1 day ago
+    isLiked: false,
+    profileClass:
+      initialContainerBackgroundClassNames[
+        Math.floor(Math.random() * initialContainerBackgroundClassNames.length)
+      ],
+  },
+];
 
 class Comments extends Component {
-  state = { name: "", comment: "", commentList: [] };
+  state = { name: "", comment: "", commentList: initialCommentList };
 
   toggleIsLiked = (id) => {
     this.setState((prevState) => ({
